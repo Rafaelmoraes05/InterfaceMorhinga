@@ -1,0 +1,38 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #0044ff;
+    border-bottom: 1px solid #000000;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ffffff;
+    margin-left: 10px;
+}
+
+.map-container {
+    display: flex;
+    height: calc(100% - 50px); 
+    justify-content: center;   
+    align-items: center;       
+}
+
+#map {
+    width: 30%; 
+    height: 100%;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 10px;
+}
