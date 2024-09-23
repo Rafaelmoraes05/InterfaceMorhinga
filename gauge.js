@@ -1,7 +1,4 @@
 /**
- * Data de criação: 03/09/24
- * Data do último update: 03/09/2024
- * 
  * Este script atualiza e exibe valores em gráficos de medidores (gauge).
  * Ele altera a cor e o ângulo dos medidores com base em valores específicos
  * para temperatura, umidade, pressão, luz, gás, qualidade do ar, velocidade do vento,
@@ -68,20 +65,20 @@ function colorRangeChange(min, max, value, etapa1, etapa2) {
     graficoPressao.style = colorRangeChange(900, 1100, listData.pressao, 980, 1020);
 
     // Luz
-    mostradorLuz.innerHTML = `${listData.luz} lux`;
-    graficoLuz.style = colorRangeChange(0, 100000, listData.luz, 20000, 50000);
+    mostradorLuz.innerHTML = `${listData.luminosidade} lux`;
+    graficoLuz.style = colorRangeChange(0, 100000, listData.luminosidade, 20000, 50000);
 
     // Gás
-    mostradorGas.innerHTML = `${listData.gas} ppm`;
-    graficoGas.style = colorRangeChange(0, 1000, listData.gas, 300, 700);
+    mostradorGas.innerHTML = `${listData.cO2} ppm`;
+    graficoGas.style = colorRangeChange(0, 1000, listData.cO2, 300, 700);
 
     // Qualidade do Ar
-    mostradorAr.innerHTML = `${listData.ar} AQI`;
-    graficoAr.style = colorRangeChange(0, 500, listData.ar, 100, 200);
+    mostradorAr.innerHTML = `${listData.qualidadeDoAr} AQI`;
+    graficoAr.style = colorRangeChange(0, 500, listData.qualidadeDoAr, 100, 200);
 
     // Velocidade do Vento
-    mostradorVelocidadeDoVento.innerHTML = `${listData.velocidadeVento} km/h`;
-    graficoVelocidadeDoVento.style = colorRangeChange(0, 100, listData.velocidadeVento, 20, 50);
+    mostradorVelocidadeDoVento.innerHTML = `${listData.velocidadeDoVento} km/h`;
+    graficoVelocidadeDoVento.style = colorRangeChange(0, 100, listData.velocidadeDoVento, 20, 50);
 
     // Voltagem
     mostradorVoltagem.innerHTML = `${listData.voltagem} V`;
