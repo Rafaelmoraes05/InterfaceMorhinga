@@ -22,7 +22,6 @@ body, html {
 
 .map-container {
     display: flex;
-    width:100%;
     height: calc(100% - 50px); 
     justify-content: center;   
     align-items: center;       
@@ -31,9 +30,8 @@ body, html {
 #map {
     width: 100%; 
     height: 100%;
-    transition: width 1s ease; /* Transição suave para largura */
+    transition: transform 0.3s ease;
 }
-
 
 
 
@@ -90,6 +88,7 @@ body, html {
     text-align: center;
     font-size: 14px;
     font-weight: 600;
+    transition: transform 0.3s ease;
 }
 
 .grafico {
@@ -97,6 +96,7 @@ body, html {
     margin: 15px;
     flex-basis: 200px; 
     box-sizing: border-box;
+    transition: transform 0.3s ease;
 }
 
 .content {
@@ -106,5 +106,44 @@ body, html {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15px; 
-    transition: width 1s ease;
+}
+#puxador{
+    display: none;
+    margin-left: 0;
+    margin-right: 25px;
+    height: 100%;
+    position: relative;
+    align-items: center; 
+    justify-content: center; 
+    width: 20px; 
+    background-color: #0044ff;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+#puxador>img{
+    max-width: 30px;
+
+}
+.button{
+    background-color: #0044ff;
+    color:white;
+    font-weight: 600;
+    padding: 5px 7px;
+    border-radius: 3px;
+    text-decoration: none;
+    cursor: pointer;
+    border:2px solid #0044ff;
+}
+.button:hover{
+    color: #0044ff;
+    background-color: #fff;
+}
+
+#historico{
+    position:absolute;
+    top:100px;
+    right: 30px;
+}
+#linkHistorico{
+    display:none;
 }

@@ -1,65 +1,67 @@
-const api = "http://localhost:8080/api"
+const api = "http://localhost:8080";
 
-//buscar lista com todos os objetos placa
-export async function allReadPlaca(){
-    const url = api+"/allReadPlaca";
+//retorna todas as placas do banco
+export async function allReadPlaca() {
+    const url = api + "/api/allReadPlaca";
+
     try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json', // Tipo de conteúdo
+            },    
         });
-        if(!response.ok){
-            console.log(`Erro: ${response.status} ${response.statusText}`);
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
         }
         const data = await response.json();
         console.log(data);
         return data;
     } catch (error) {
-        console.error('Erro ao buscar os dados:', error);
-    }
+        console.log(error);
+    }    
 }
 
+//retorna a última leitura de uma determinada placa
+export async function findLatestDataByPlacaId(id) {
+    const url = api + `/api/findLatestDataByPlacaId/${id}`;
 
-//buscar última entrada de dados para uma placa específica
-export async function findLatestDataByPlacaId(id){
-    const url = api + `/findLatestDataByPlacaId/${id}`;
     try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json', // Tipo de conteúdo
+            },    
         });
-        if(!response.ok){
-            console.log(`Erro: ${response.status} ${response.statusText}`);
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
         }
         const data = await response.json();
         console.log(data);
         return data;
     } catch (error) {
-        console.error('Erro ao buscar os dados:', error);
-    }
+        console.log(error);
+    }    
 }
 
-//buscar intervalo temporal para uma placa em específico
-export async function findByPlacaIdAndDateRange(id, startDate, endDate){
-    const url = api + `/findByPlacaIdAndDateRange/${id}/${startDate}/${endDate}`;
+//retorna uma lista de leituras dentro de um intervalo temporal para determinada placa
+export async function findByPlacaIdAndDateRange(id, startDate, endDate) {
+    const url = api + `/api/findByPlacaIdAndDateRange/${id}/${startDate}/${endDate}`;
+
     try {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json'
-            }
+                'Content-Type': 'application/json', // Tipo de conteúdo
+            },    
         });
-        if(!response.ok){
-            console.log(`Erro: ${response.status} ${response.statusText}`);
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
         }
         const data = await response.json();
         console.log(data);
         return data;
     } catch (error) {
-        console.error('Erro ao buscar os dados:', error);
-    }
+        console.log(error);
+    }    
 }

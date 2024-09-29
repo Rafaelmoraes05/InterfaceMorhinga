@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoRHinga</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styleHistorico.css">
+    <script defer type="module" src="main.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/dygraphs@2.1.0/dist/dygraph.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dygraphs@2.1.0/dist/dygraph.min.css" />
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="brand"><a href="index.html" class="logo">Morhinga</a></div>
+    </div>
+
+    <div class="formulario">
+        <h2>Pesquisar intervalo temporal</h2>
+        <div class="form">
+            <div class="inputs">
+                <div class="label">
+                    <label for="startDate">Data de início</label>
+                </div>
+                <div class="input">
+                    <input type="date" name="startDate" id="startDate">
+                </div>
+            </div>
+            <div class="inputs">
+                <div class="label">
+                    <label for="endDate">Data de fim</label>
+                </div>
+                <div class="input">
+                    <input type="date" name="endDate" id="endDate">
+                </div>
+            </div>
+            <button id="formTemporal" class="button" >Pesquisar</button>
+        </div>
+    </div>
+    <div id="charts"></div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="historico.js"></script>
+
+</body>
+</html>

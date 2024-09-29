@@ -1,4 +1,7 @@
 /**
+ * Data de criação: 03/09/24
+ * Data do último update: 03/09/2024
+ * 
  * Este script atualiza e exibe valores em gráficos de medidores (gauge).
  * Ele altera a cor e o ângulo dos medidores com base em valores específicos
  * para temperatura, umidade, pressão, luz, gás, qualidade do ar, velocidade do vento,
