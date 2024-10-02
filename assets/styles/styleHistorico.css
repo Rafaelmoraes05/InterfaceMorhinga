@@ -1,0 +1,30 @@
+.formulario{
+    max-width: 70%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.label{
+    font-weight: 600;
+    margin: 10px 0 5px 0;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo{
+    text-decoration: none;
+    color:white;
+}
+.form{
+    display: flex;
+    gap: 50px;
+    align-items: flex-end
+}
+#charts{
+    max-width: 50%;
+    margin:30px auto;
+
+}
