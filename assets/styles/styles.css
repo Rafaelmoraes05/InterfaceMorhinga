@@ -2,6 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
+    overflow:initial;
 }
 
 .navbar {
@@ -14,7 +15,7 @@ body, html {
 }
 
 .navbar .brand {
-    font-size: 1.5em;
+    font-size: 20px;
     font-weight: bold;
     color: #ffffff;
     margin-left: 10px;
@@ -22,7 +23,7 @@ body, html {
 
 .map-container {
     display: flex;
-    height: calc(100% - 50px); 
+    height: calc(100% - 75px); 
     justify-content: center;   
     align-items: center;       
 }
@@ -30,74 +31,10 @@ body, html {
 #map {
     width: 100%; 
     height: 100%;
-    transition: transform 0.3s ease;
+    transition: width 0.6s ease;
 }
 
 
-
-.gauge {
-    position: relative;
-    border-radius: 50%/100% 100% 0 0;
-    background-color: var(--color, #a22);
-    overflow: hidden;
-    flex-shrink: 0; 
-    width: 100%; 
-}
-
-.gauge:before {
-    content: "";
-    display: block;
-    padding-top: 50%; 
-}
-
-.gauge .mask {
-    position: absolute;
-    left: 20%;
-    right: 20%;
-    bottom: 0;
-    top: 40%;
-    background-color: #fff;
-    border-radius: 50%/100% 100% 0 0;
-}
-
-.gauge .percentage {
-    position: absolute;
-    top: -1px;
-    left: -1px;
-    bottom: 0;
-    right: -1px;
-    background-color: var(--background, #aaa);
-    transform: rotate(var(--rotation));
-    transform-origin: bottom center;
-    transition-duration: 600ms;
-}
-
-.gauge .value {
-    position: absolute;
-    bottom: 0%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-}
-.legenda{
-    position: absolute;
-    bottom: 30%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    transition: transform 0.3s ease;
-}
-
-.grafico {
-    max-width: 250px;
-    margin: 15px;
-    flex-basis: 200px; 
-    box-sizing: border-box;
-    transition: transform 0.3s ease;
-}
 
 .content {
     padding: 50px;
@@ -106,6 +43,8 @@ body, html {
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 15px; 
+    opacity: 0;
+    transition: width 0.6s ease;
 }
 #puxador{
     display: none;
@@ -115,10 +54,10 @@ body, html {
     position: relative;
     align-items: center; 
     justify-content: center; 
-    width: 20px; 
+    width: 12px; 
     background-color: #0044ff;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: width 0.3s ease;
 }
 #puxador>img{
     max-width: 30px;
