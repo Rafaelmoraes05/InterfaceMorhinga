@@ -24,7 +24,13 @@
     align-items: flex-end
 }
 #charts{
-    max-width: 50%;
+    max-width: 100%;
     margin:30px auto;
-
+    display: flex;
+    flex-wrap: wrap;
+    gap:200px;
+    justify-content: center;
+}
+.graficoDygraph{
+    width: 600px !important;
 }
