@@ -21,7 +21,7 @@ function criarTabela(data, parametro) {
         tr.appendChild(criarCelula(criarLista(element.mapaDados[parametro].moda)));
         tr.appendChild(criarCelula(criarLista(element.mapaDados[parametro].mediana)));
         tr.appendChild(criarCelula(element.mapaDados[parametro].q1));
-        tr.appendChild(criarCelula(element.mapaDados[parametro].q2));
+        tr.appendChild(criarCelula(element.mapaDados[parametro].q3));
         table.appendChild(tr);
     });
 
@@ -31,7 +31,7 @@ function criarTabela(data, parametro) {
 function criarCabecalho() {
     const thead = document.createElement("thead");
     const tr = document.createElement("tr");
-    ['Data e Hora', 'Média', 'Moda', 'Mediana', 'Q1', 'Q2'].forEach(texto => {
+    ['Data e Hora', 'Média', 'Moda', 'Mediana', 'Q1', 'Q3'].forEach(texto => {
         const th = document.createElement("th");
         th.textContent = texto;
         tr.appendChild(th);
