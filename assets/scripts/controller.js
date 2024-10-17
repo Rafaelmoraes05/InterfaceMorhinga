@@ -8,7 +8,7 @@ export async function allReadPlaca() {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json', // Tipo de conteúdo
+                'Content-Type': 'application/json', 
             },    
         });
         if (!response.ok) {
@@ -30,7 +30,7 @@ export async function findLatestDataByPlacaId(id) {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json', // Tipo de conteúdo
+                'Content-Type': 'application/json', 
             },    
         });
         if (!response.ok) {
@@ -52,7 +52,7 @@ export async function findByPlacaIdAndDateRange(id, startDate, endDate) {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                'Content-Type': 'application/json', // Tipo de conteúdo
+                'Content-Type': 'application/json',
             },    
         });
         if (!response.ok) {
@@ -64,4 +64,26 @@ export async function findByPlacaIdAndDateRange(id, startDate, endDate) {
     } catch (error) {
         console.log(error);
     }    
+}
+
+//retorna os dados processados de uma leitura dentro de um intervalo temporal para determinada placa
+export async function processDataPlacaAndDateRange(id, startDate, endDate){
+    const url = api + `/api/processDataPlacaAndDateRange/${id}/${startDate}/${endDate}`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },    
+        });
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
+        }
+        const data = await response.json();
+        console.log(data);
+        return data;
+    } catch (error) {
+        console.log(error);
+    }  
 }
