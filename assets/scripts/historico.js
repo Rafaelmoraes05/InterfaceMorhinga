@@ -37,6 +37,8 @@ document.querySelector("#formTemporal").addEventListener("click", async () => {
             item.velocidadeDoVento,
             item.voltagem,
             item.rpm,
+            item.ph,
+            item.pluviometria
         ];
     });
 
@@ -57,6 +59,8 @@ function gerarGraficoDygraph(dados) {
         "Velocidade Do Vento km/h",
         "Voltagem V",
         "RPM",
+        "pH",
+        "Pluviometria mm"
     ];
 
     // Definir dimensões explícitas para os contêineres

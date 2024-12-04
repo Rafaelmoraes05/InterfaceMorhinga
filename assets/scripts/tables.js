@@ -1,7 +1,7 @@
 export function construirTables(data) {
     const parametros = [
         'temperatura', 'umidade', 'pressao', 'velocidadeDoVento', 'cO2',
-        'rpm', 'qualidadeDoAr', 'luminosidade', 'voltagem'
+        'rpm', 'qualidadeDoAr', 'luminosidade', 'voltagem', 'ph', 'pluviometria'
     ];
 
     parametros.forEach(param => {
@@ -13,7 +13,7 @@ export function construirTables(data) {
 function criarTabela(data, parametro) {
     const table = document.createElement("table");
     table.appendChild(criarCabecalho());
-
+    data.sort((a, b) => new Date(b.intervaloTempo) - new Date(a.intervaloTempo));
     data.forEach(element => {
         const tr = document.createElement("tr");
         tr.appendChild(criarCelula(element.intervaloTempo));

@@ -7,6 +7,8 @@ let mostradorAr;
 let mostradorVelocidadeVento;
 let mostradorVoltagem;
 let mostradorRpm;
+let mostradorPH;
+let mostradorPluviometro;
 
 export function preencherJustGageCharts(data){
 
@@ -114,6 +116,29 @@ export function preencherJustGageCharts(data){
         min: 0,
         max: 10000,
         title: "RPM",
+        refreshAnimation: true,
+        relativeGaugeSize: true      
+    });
+    
+    //pH
+    document.querySelector("#graficoPH").innerHTML="";
+    mostradorPH= new JustGage({
+        id: "graficoPH",
+        value: data.ph,
+        min: 0,
+        max: 14,
+        title: "PH",
+        refreshAnimation: true,
+        relativeGaugeSize: true      
+    });
+    //RPM
+    document.querySelector("#graficoPluviometro").innerHTML="";
+    mostradorPluviometro= new JustGage({
+        id: "graficoPluviometro",
+        value: data.pluviometro,
+        min: 0,//verificar
+        max: 10000,//verificar
+        title: "Pluviometria ",
         refreshAnimation: true,
         relativeGaugeSize: true      
     });

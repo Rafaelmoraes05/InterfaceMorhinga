@@ -61,6 +61,8 @@ document.querySelector("#puxador").addEventListener("click", () => {
   document.querySelector("#graficoVelocidadeDoVento").innerHTML="";
   document.querySelector("#graficoVoltagem").innerHTML="";
   document.querySelector("#graficoRpm").innerHTML="";
+  document.querySelector("#graficoPH").innerHTML="";
+  document.querySelector("#graficoPluviometro").innerHTML="";
 
   puxador.style.display = "none";
   historico.style.display = "none";
