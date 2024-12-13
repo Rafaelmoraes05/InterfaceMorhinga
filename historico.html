@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoRHinga</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styleHistorico.css">
-    <script defer type="module" src="main.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/dygraphs@2.1.0/dist/dygraph.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dygraphs@2.1.0/dist/dygraph.min.css" />
+    <!--Estilos-->
+    <link rel="stylesheet" href="./assets/styles/styleHistorico.css">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+
+    <!--Charts js-->
+    <script defer type="module" src="./assets/scripts/historico.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!--Dygraphs-->
+    <script type="text/javascript" src="https://unpkg.com/dygraphs@2.2.1/dist/dygraph.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/dygraphs@2.2.1/dist/dygraph.min.css" />
+
+    <!--Abas-->
+    <script defer src="./assets/scripts/abas.js"></script>
+
+    <!--Tabelas-->
+    <script defer type="module" src="./assets/scripts/tables.js"></script>
 </head>
 <body>
 
@@ -39,9 +51,61 @@
             <button id="formTemporal" class="button" >Pesquisar</button>
         </div>
     </div>
-    <div id="charts"></div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script type="module" src="historico.js"></script>
+    <div class="tabs-container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="tab1">Gráficos</button>
+            <button class="tab-button" data-tab="tab2">Temperatura</button>
+            <button class="tab-button" data-tab="tab3">Umidade</button>
+            <button class="tab-button" data-tab="tab4">Pressão</button>
+            <button class="tab-button" data-tab="tab5">Luminosidade</button>
+            <button class="tab-button" data-tab="tab6">CO2</button>
+            <button class="tab-button" data-tab="tab7">Qualidade do Ar</button>
+            <button class="tab-button" data-tab="tab8">Velocidade do Vento</button>
+            <button class="tab-button" data-tab="tab9">Voltagem</button>
+            <button class="tab-button" data-tab="tab10">RPM</button>
+            <button class="tab-button" data-tab="tab11">pH</button>
+            <button class="tab-button" data-tab="tab12">Pluviometro</button>
+        </div>
+
+        <div class="tab-content active" id="tab1">
+            <div id="charts"></div>
+        </div>
+        <div class="tab-content" id="tab2">
+            <div id="temperatura"></div>
+        </div>
+        <div class="tab-content" id="tab3">
+            <div id="umidade"></div>
+        </div>
+        <div class="tab-content" id="tab4">
+            <div id="pressao"></div>
+        </div>
+        <div class="tab-content" id="tab5">
+            <div id="luminosidade"></div>
+        </div>
+        <div class="tab-content" id="tab6">
+            <div id="cO2"></div>
+        </div>
+        <div class="tab-content" id="tab7">
+            <div id="qualidadeDoAr"></div>
+        </div>
+        <div class="tab-content" id="tab8">
+            <div id="velocidadeDoVento"></div>
+        </div>
+        <div class="tab-content" id="tab9">
+            <div id="voltagem"></div>
+        </div>
+        <div class="tab-content" id="tab10">
+            <div id="rpm"></div>
+        </div>
+        <div class="tab-content" id="tab11">
+            <div id="ph"></div>
+        </div>
+        <div class="tab-content" id="tab12">
+            <div id="pluviometria"></div>
+        </div>
+    </div>
+
+    
 
 </body>
 </html>
