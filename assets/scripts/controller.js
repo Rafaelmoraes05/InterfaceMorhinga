@@ -1,4 +1,4 @@
-const api = "http://localhost:8080";
+const api = "https://spring-moringa.onrender.com";
 
 //retorna todas as placas do banco
 export async function allReadPlaca() {
