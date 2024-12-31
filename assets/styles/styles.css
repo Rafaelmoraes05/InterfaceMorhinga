@@ -1,23 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+.brand{
+    font-family: 'Afacad Flux', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #022b3a;
+}
 body, html {
     height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow:initial;
+    overflow:hidden;
+    background-color: #e8e7d2;
+
 }
 
 .navbar {
-    background-color: #0044ff;
-    border-bottom: 1px solid #000000;
-    padding: 25px;
+    background-color: #a9e4cf;
+    box-shadow: 1px 1px 10px #022b3a9d;
+    border-bottom: 1px solid #022b3a9d;
+    padding: 20px 20px 13px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+
+
+.content {
+    padding: 20px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    width: 100%;
+    height: calc(100% - 75px);
+    overflow: auto;
+}
+
+.content > div {
+    flex: 1 1 calc(33.333% - 30px); /* Ajusta a largura dos gráficos */
+    min-width: 200px; /* Largura mínima para os gráficos */
+    max-width: 300px; /* Largura máxima para os gráficos */
+    height: 200px; /* Altura fixa para os gráficos */
+    box-sizing: border-box;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+    transition: width 0.6s ease;
+}
+
 .navbar .brand {
-    font-size: 20px;
-    font-weight: bold;
-    color: #ffffff;
     margin-left: 10px;
 }
 
@@ -27,7 +62,7 @@ body, html {
     justify-content: center;   
     align-items: center;       
 }
-
+/*
 #map {
     width: 100%; 
     height: 100%;
@@ -45,7 +80,7 @@ body, html {
     gap: 15px; 
     opacity: 0;
     transition: width 0.6s ease;
-}
+}*/
 #puxador{
     display: none;
     margin-left: 0;
@@ -55,7 +90,7 @@ body, html {
     align-items: center; 
     justify-content: center; 
     width: 12px; 
-    background-color: #0044ff;
+    background-color: #a9e4cf;
     cursor: pointer;
     transition: width 0.3s ease;
 }
@@ -64,24 +99,26 @@ body, html {
 
 }
 .button{
-    background-color: #0044ff;
-    color:white;
+    background-color: #a9e4cf;
+    color:#022b3a;
     font-weight: 600;
     padding: 5px 7px;
     border-radius: 3px;
     text-decoration: none;
     cursor: pointer;
-    border:2px solid #0044ff;
+    border:2px solid #a9e4cf;
 }
 .button:hover{
-    color: #0044ff;
-    background-color: #fff;
+    border:2px solid #022b3a;
+    color: #a9e4cf;
+    background-color: #022b3a;
 }
 
 #historico{
     position:absolute;
     top:100px;
     right: 30px;
+    z-index: 10;
 }
 #linkHistorico{
     display:none;
