@@ -3,7 +3,7 @@ import { preencherGrafico } from "./gauge.js";
 import { preencherJustGageCharts } from "./justgagecharts.js"
 
 // Inicializa o mapa
-var map = L.map("map").setView([-8.059694, -34.951917], 9);
+var map = L.map("map").setView([-8.059694, -34.951917], 8);
 
 // Adiciona o tile layer ao mapa
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
